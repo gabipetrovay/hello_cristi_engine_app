@@ -2,7 +2,7 @@
     "name": "hello_cristi_engine_app",
     "version": "0.1.0",
     "dependencies": {
-        "view": "git+ssh://git@github.com:adioo/view.git",
+        "view": "git+ssh://git@github.com:adioo/view.git"
     }
 }
 

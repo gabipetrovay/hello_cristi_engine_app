@@ -1,0 +1,9 @@
+{
+    "name": "index",
+    "module": "view",
+    "roles": {"*": true},
+    "client": {
+        "config": {},
+        "markup": ["/hello.html"]
+    }
+}
