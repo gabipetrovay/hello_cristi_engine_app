@@ -3,7 +3,39 @@
     "module": "view",
     "roles": {"*": true},
     "client": {
-        "config": {},
-        "markup": ["/hello.html"]
+        "config": {
+            "title": "Hello, Christi!",
+            "template": {
+                "to": "body",
+                "html": "/hello.html"
+            }
+        },
+        "markup": ["/hello.html"],
+        "flow": [
+            {
+                "in": "^/$",
+                "out": [
+                    {
+                        "call": "render",
+                        "data": {
+                            "data": [{
+                                "custom_name": "World"
+                            }]
+                        }
+                    }
+                ]
+            },
+            {
+                "in": "^/[^/]+/?",
+                "out": [
+                    {
+                        "call": "render",
+                        "set": {
+                            "data.custom_name": "_path.0"
+                        }
+                    }
+                ]
+            }
+        ]
     }
 }
